@@ -51,4 +51,5 @@ def scores():
 		my_list.remove(wisdom)
 		charisma=raw_input("Please input the value for charisma: ")
 		my_list.remove(charisma)
-		
+		""" will probably build a dictionary as the return object that goes back to the main script.
+		    this is likely the easiest way to handle the data"""
