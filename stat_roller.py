@@ -4,6 +4,13 @@
    values of the rolls to the corresponding character ability"""
 
 import random
+
+def calculate_mods(str, dex, con, int, wis, cha):
+	"""This function should assign the ability modifier to corresponding variables
+	   which I will likely also return as a dictionary. I'm beginning to think about using 
+	   temp files or something stored as json to pass the growing amount of information
+	   between the various scripted functions"""
+
 def assign_scores(my_list):
 	print("Here are the scores: ", my_list)
 	strength=raw_input("Please input the value for strength: ")
