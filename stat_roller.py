@@ -10,7 +10,7 @@ def assign_scores(my_list):
 	my_list.remove(int(strength))
 	dexterity=raw_input("Please input the value for dexterity: ")
 	my_list.remove(int(dexterity))
-	constiution=raw_input("Please input the value for constitution: ")
+	constitution=raw_input("Please input the value for constitution: ")
 	my_list.remove(int(constitution))
 	intelligence=raw_input("Please input the value for intelligence: ")
 	my_list.remove(int(intelligence))
@@ -21,7 +21,7 @@ def assign_scores(my_list):
 	""" will probably build a dictionary as the return object that goes back to the main script.
 	    this is likely the easiest way to handle the data
 	    for testing only I will print each variable separately"""
-	print strength, ' ', dexterity, ' ', constitution, ' ', intelligence, ' ', wisdom, ' ', charisma
+	#print strength, ' ', dexterity, ' ', constitution, ' ', intelligence, ' ', wisdom, ' ', charisma
 
 def scores():
 	score_menu={}
@@ -36,7 +36,7 @@ def scores():
 		print(entry, score_menu[entry])
 
 	roll_method=raw_input("Method choide: ")
-	print(roll_method)
+	#print(roll_method)
 
 	if roll_method == '1':
 		print("Traditional Method selected! Rolling up 6 random numbers")
