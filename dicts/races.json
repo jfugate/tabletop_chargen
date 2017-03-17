@@ -1,0 +1,35 @@
+{
+	"Human":{
+		"Racial Traits" : {
+			"Ability" : {
+				"Score" : "Any",
+				"Adjustment" : "+2"
+			},
+			"Skill" : {
+				"Skill" : "Any",
+				"Adjustment": "+1"
+			},
+			"Feat" : {
+				"Bonus" : "Any"
+			},
+			"Languages" : [ 
+				"Common",
+				"Any non-secret language equal to Intelligence Modifier"
+			],
+			"Size" : "Medium",
+			"Speed" : "30 Ft"
+		}
+	},
+	"Half-Elf" : {
+		"Racial Traits" : {
+			"Ability" : {
+				"Score" : "Any",
+				"Adjustment" : "+2"
+			},
+			"Skill" : {
+				"Skill" : "Perception",
+				"Adjustment" : "+2"
+			}
+		}
+	}
+}
