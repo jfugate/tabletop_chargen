@@ -2,7 +2,7 @@
 
 #This script will form the menus, and call the functions that both build and store relevant information, then display it to the user
 import char_name
-
+import stat_roller
 
 def main_menu():
 	menu = {}
@@ -34,9 +34,8 @@ def main_menu():
 		 	name=str(char_name.name_saver())
 		 	option_1=True
 		 elif selection == 2:
-		 	"""function code for stat rolling, will include two options
-		 	traditional 5d6 method and the d10+8 method
-		 	this will also refer to a json doc to be made soon with ability modifier to be stored/returned here"""
+		 	stat_roller.scores()
+		 	option_2=True
 		 elif selection == 3:
 		 	"""Race, will need ability scores as parameters, just in case a race is chosen than alters those scores"""		 	
 		 elif selection == 4:
