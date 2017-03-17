@@ -3,13 +3,18 @@
 """This script will provide a couple of options for stat rolling, and then allow the user to assign the
    values of the rolls to the corresponding character ability"""
 
-import random
+import random, json
 
-def calculate_mods(str, dex, con, int, wis, cha):
-	"""This function should assign the ability modifier to corresponding variables
-	   which I will likely also return as a dictionary. I'm beginning to think about using 
-	   temp files or something stored as json to pass the growing amount of information
-	   between the various scripted functions"""
+def calculate_mods(strength, dex, con, intelligence, wis, cha):
+	with open('dicts/ability_modifiers.json') as mods_file:
+		mods = json.load(mods_file)
+	str_mod = mods['ability'][0][strength]
+	dex_mod = mods['ability'][0][dex]
+	con_mod = mods['ability'][0][con]
+	int_mod = mods['ability'][0][intelligence]
+	wis_mod = mods['ability'][0][wis]
+	cha_mod = mods['ability'][0][cha]
+	print str_mod, dex_mod, con_mod, int_mod, wis_mod, cha_mod
 
 def assign_scores(my_list):
 	print("Here are the scores: ", my_list)
@@ -25,6 +30,8 @@ def assign_scores(my_list):
 	my_list.remove(int(wisdom))
 	charisma=raw_input("Please input the value for charisma: ")
 	my_list.remove(int(charisma))
+	print("now calculating modifiers")
+	calculate_mods(strength, dexterity, constitution, intelligence, wisdom, charisma)
 	""" will probably build a dictionary as the return object that goes back to the main script.
 	    this is likely the easiest way to handle the data
 	    for testing only I will print each variable separately"""
