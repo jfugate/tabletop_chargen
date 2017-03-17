@@ -16,8 +16,11 @@ def calculate_mods(strength, dex, con, intelligence, wis, cha):
 	stats['int_mod'] = mods['ability'][0][intelligence]
 	stats['wis_mod'] = mods['ability'][0][wis]
 	stats['cha_mod'] = mods['ability'][0][cha]
-	with open('ability_temp.json', 'w') as tmp_json:
-		json.dump(stats, tmp_json)
+	"""with open('ability_temp.json', 'w') as tmp_json:
+		json.dump(stats, tmp_json)"""
+	"""Not sure if using tmp files, or trying to handle several json objects in the main script is a better idea
+	   for each of the separate build phases, or using temp files to house the data"""
+	return stats
 	
 
 def assign_scores(my_list):
