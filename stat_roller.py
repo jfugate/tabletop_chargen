@@ -5,33 +5,37 @@
 
 import random, json
 
+stats={}
+
 def calculate_mods(strength, dex, con, intelligence, wis, cha):
 	with open('dicts/ability_modifiers.json') as mods_file:
 		mods = json.load(mods_file)
-	str_mod = mods['ability'][0][strength]
-	dex_mod = mods['ability'][0][dex]
-	con_mod = mods['ability'][0][con]
-	int_mod = mods['ability'][0][intelligence]
-	wis_mod = mods['ability'][0][wis]
-	cha_mod = mods['ability'][0][cha]
-	print str_mod, dex_mod, con_mod, int_mod, wis_mod, cha_mod
+	stats['str_mod'] = mods['ability'][0][strength]
+	stats['dex_mod'] = mods['ability'][0][dex]
+	stats['con_mod'] = mods['ability'][0][con]
+	stats['int_mod'] = mods['ability'][0][intelligence]
+	stats['wis_mod'] = mods['ability'][0][wis]
+	stats['cha_mod'] = mods['ability'][0][cha]
+	with open('ability_temp.json', 'w') as tmp_json:
+		json.dump(stats, tmp_json)
+	
 
 def assign_scores(my_list):
 	print("Here are the scores: ", my_list)
-	strength=raw_input("Please input the value for strength: ")
-	my_list.remove(int(strength))
-	dexterity=raw_input("Please input the value for dexterity: ")
-	my_list.remove(int(dexterity))
-	constitution=raw_input("Please input the value for constitution: ")
-	my_list.remove(int(constitution))
-	intelligence=raw_input("Please input the value for intelligence: ")
-	my_list.remove(int(intelligence))
-	wisdom=raw_input("Please input the value for wisdom: ")
-	my_list.remove(int(wisdom))
-	charisma=raw_input("Please input the value for charisma: ")
-	my_list.remove(int(charisma))
+	stats['strength']=raw_input("Please input the value for strength: ")
+	my_list.remove(int(stats['strength']))
+	stats['dexterity']=raw_input("Please input the value for dexterity: ")
+	my_list.remove(int(stats['dexterity']))
+	stats['constitution']=raw_input("Please input the value for constitution: ")
+	my_list.remove(int(stats['constitution']))
+	stats['intelligence']=raw_input("Please input the value for intelligence: ")
+	my_list.remove(int(stats['intelligence']))
+	stats['wisdom']=raw_input("Please input the value for wisdom: ")
+	my_list.remove(int(stats['wisdom']))
+	stats['charisma']=raw_input("Please input the value for charisma: ")
+	my_list.remove(int(stats['charisma']))
 	print("now calculating modifiers")
-	calculate_mods(strength, dexterity, constitution, intelligence, wisdom, charisma)
+	calculate_mods(stats['strength'], stats['dexterity'], stats['constitution'], stats['intelligence'], stats['wisdom'], stats['charisma'])
 	""" will probably build a dictionary as the return object that goes back to the main script.
 	    this is likely the easiest way to handle the data
 	    for testing only I will print each variable separately"""
