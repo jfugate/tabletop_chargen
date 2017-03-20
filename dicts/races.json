@@ -2,13 +2,13 @@
 	"Human":{
 		"Racial Traits" : {
 			"Ability" : {
-				"Score" : "Any",
-				"Adjustment" : "+2"
+				"Score" : [{
+					"Any" : "+2"
+				}]
 			},
-			"Skill" : {
-				"Skill" : "Any",
-				"Adjustment": "+1"
-			},
+			"Skill" : [{
+				"Any" : "+1"
+			}],
 			"Feat" : {
 				"Bonus" : "Any"
 			},
@@ -23,13 +23,67 @@
 	"Half-Elf" : {
 		"Racial Traits" : {
 			"Ability" : {
-				"Score" : "Any",
-				"Adjustment" : "+2"
+				"Score" : [{
+					"Any" : "+2",
+				}]
 			},
 			"Skill" : {
-				"Skill" : "Perception",
-				"Adjustment" : "+2"
-			}
+				"Skills" : [{
+					"Perception" : "+2"
+				}]
+			},
+			"Feat" : {
+				"Bonus" : "Skill Focus"
+			},
+			"Languages" : [
+				"Common",
+				"Elven",
+				"Any non-secret language equal to Intelligence Modifier"
+			],
+			"Size" : "Medium",
+			"Speed" : "30 Ft",
+			"Special" : [
+				"Low-Light Vision",
+				"Elf Blood",
+				"+2 vs Sleep effects"
+			]
+		}
+	},
+	"Dwarf" : {
+		"Racial Traits" : {
+			"Ability" : {
+				"Score" : {
+					"Ability" : [{
+						"Constitution" : "+2",
+						"Wisdom" : "+2",
+						"Charisma" : "-2"
+					}]
+				}
+			},
+			"Skill" : {
+				"Skills" : [{
+					"Appraise" : "+2"
+				}]
+			},
+			"Feat" : {
+				"Bonus" : "None"
+			},
+			"Languages" : [
+				"Common",
+				"Dwarven",
+				"Choice from: Giant, Gnome, Goblin, Orc, Terran, Undercommon; Equal to Int Modifier"
+			],
+			"Size" : "Medium",
+			"Speed" : "20 Ft",
+			"Special" : [
+				"+4 Dodge to AC vs monsters of Giant type",
+				"+2 vs poison saving throws",
+				"+4 to CMD when resisting Bull Rush or Trip",
+				"+2 Perception to notice unusual stonework, such as traps and hidden doors located in stone walls or floors",
+				"Darkvision 60 Ft",
+				"+1 attack vs Orc/Goblinoid foes",
+				"Treat the following weapons as Martial: Battleaxes, Heavy Picks, Warhammers, anything with Dwarven in the name"
+			]
 		}
 	}
 }
