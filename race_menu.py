@@ -22,3 +22,14 @@ while True:
 	  for entry in options:
 	  	print entry, menu[entry]
 	selection=raw_input("Your Choice: ")
+
+	if selection == '1':
+		print("Human selected. Finding bonuses...")
+		'''Figure out dynamically updating stats by importing the data from the previous
+		function set'''
+		speed="30 Ft"
+		size="Medium"
+		#Make language a function later to let user choose from list
+		laguanges="Common, plus one per intelligence modifier (Except secret)"
+		other=["One bonus feat", "One extra skill point at lvl 1 and 1/lvl"]
+		
